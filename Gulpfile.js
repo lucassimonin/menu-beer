@@ -16,8 +16,7 @@ var paths = {
         ],
         js: [
             'web/assets/vendor/jquery/dist/jquery.min.js',
-            'web/assets/vendor/bootstrap/dist/js/bootstrap.min.js',
-            'web/assets/public/js/script.js'
+            'web/assets/vendor/bootstrap/dist/js/bootstrap.min.js'
         ],
         js_ie: [
             'web/assets/vendor/html5shiv/dist/html5shiv.js',

@@ -1,11 +1,44 @@
 {% extends 'base.html.twig' %}
-{% block meta_title %}Admin Index{% endblock %}
+{% block meta_title %}{{ ('app.beer.list')|trans }}{% endblock %}
 {% block content %}
-<div class="container" id="main">
-    <h2>Users</h2>
-    <ul>
-        <li><a href="{{ path('user_list') }}">List</a></li>
-        <li><a href="{{ path('user_add') }}">Add</a></li>
-    </ul>
-</div>
+    <div class="container" id="main">
+        
+        <h2>{{ ('app.beer.list')|trans }}</h2>
+        <a href="{{ path('fos_user_security_logout') }}">{{ ('app.global.disconnect')|trans }}</a>
+        
+        {% if beers|length > 0 %}
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>{{ ('app.beer.number')|trans }}</th>
+                        <th>{{ ('app.beer.name')|trans }}</th>
+                        <th>{{ ('app.beer.brewery')|trans }}</th>
+                        <th>{{ ('app.beer.country')|trans }}</th>
+                        <th>{{ ('app.beer.type')|trans }}</th>
+                        <th>{{ ('app.beer.degree')|trans }}</th>
+                        <th>{{ ('app.beer.price')|trans }}</th>
+                        <th>{{ ('app.beer.actions')|trans }}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% for beer in beers %}
+                            <tr>
+                                <td>{{ beer.number }}</td>
+                                <td>{{ beer.name }}</td>
+                                <td>{{ beer.brewery }}</td>
+                                <td>{{ beer.country }}</td>
+                                <td>{{ beer.type }}</td>
+                                <td>{{ beer.degree }}</td>
+                                <td>{{ beer.price }}</td>
+                                {% include ':parts:actions.html.twig'  with {'id': beer.id } %}
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            {{ 'app.no_data'|trans }}
+        {% endif %}
+    </div>
 {% endblock %}

@@ -1,53 +1,36 @@
 {% extends 'base.html.twig' %}
-{% block meta_title %}Accueil{% endblock %}
+{% block meta_title %}{{ ('app.homepage')|trans }}{% endblock %}
 {% block content %}
 <div class="container" id="main">
-    {% if sessions|length > 0 %}
-        {% for name, session in sessions %}
-            <div class="col-sm-4 {% if loop.index == 4 or loop.index == 7 %}clear{% endif %}">
-                <div class="block-day panel panel-default">
-                    <div class="panel-heading">
-                        <h2 class="title-day">{{ name|trans }}</h2>
-                        <button type="button" class="btn btn-subscription btn-openclose" data-toggle="collapse" data-target="#{{ name|trans|lower }}_{{ loop.index }}">{{ 'app.btn.open'|trans }}</button>
-                    </div>
-                    <ul class="list-group" id="{{ name|trans|lower }}_{{ loop.index }}">
-                        {% for training in session %}
-                            {% if training.session.users|length == 0 %}
-                                {% set textTooltip = 'app.session.no_user'|trans %}
-                            {% else %}
-                                {% set textTooltip %}
-                                    <ol>
-                                        {% for user in training.session.users %}
-                                            <li>{{ user.fullname }}</li>
-                                        {% endfor %}
-                                    </ol>
-                                {% endset %}
-                            {% endif %}
-                        <li class="list-group-item {% if training.disabled %} disabled {% endif %}">
-                            <span class="badge" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="{{ 'app.session.subscription_in'|trans }}" data-content="{{ textTooltip }}">{{ 'app.subscription'|trans({'%nbuser%': training.session.users|length, '%maxuser%': max_user}) }}</span>
-                            <div class="clearfix"></div>
-                            <p class="hour">{{ training.session.startTime|date('H:i') }} - {{ training.session.endTime|date('H:i') }}</p>
-                            {% set maxUserInSession = twig_session_helper.isMaxUsers(training.session) %}
-                            {% set isInThisSession = twig_user_helper.isInThisSession(app.user, training.session.id) %}
-                            {% if not training.disabled and not app.user.isFullSubscription and not isInThisSession and not maxUserInSession %}
-                                <a href="{{ path('subscription_add', {'id': training.session.id}) }}" class="btn-md btn btn-subscription">{{ 'app.btn.subscription'|trans }}</a>
-                            {% else %}
-                                {% if isInThisSession %}
-                                    <p class="alert-info">{{ 'app.session.subscription_here'|trans }}</p>
-                                    <a href="{{ path('subscription_remove', {'id': training.session.id}) }}" class="btn-md btn btn-subscription btn-delete">{{ 'app.btn.unsubscription'|trans }}</a>
-                                {% elseif maxUserInSession %}
-                                    <p class="alert-danger">{{ 'app.session.max_user'|trans }}</p>
-                                {% endif %}
-                            {% endif %}
-                            {% if is_granted("ROLE_ADMIN") or is_granted("ROLE_SUPER_ADMIN") %}
-                                <a href="{{ path('session_delete', {'id': training.session.id}) }}" class="btn-md btn btn-subscription btn-delete">{{ 'app.btn.delete'|trans }}</a>
-                            {% endif %}
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        {% endfor %}
+    {% if beers|length > 0 %}
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>{{ ('app.beer.number')|trans }}</th>
+                    <th>{{ ('app.beer.name')|trans }}</th>
+                    <th>{{ ('app.beer.brewery')|trans }}</th>
+                    <th>{{ ('app.beer.country')|trans }}</th>
+                    <th>{{ ('app.beer.type')|trans }}</th>
+                    <th>{{ ('app.beer.degree')|trans }}</th>
+                    <th>{{ ('app.beer.price')|trans }}</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {% for beer in beers %}
+                        <tr>
+                            <td>{{ beer.number }}</td>
+                            <td>{{ beer.name }}</td>
+                            <td>{{ beer.brewery }}</td>
+                            <td>{{ beer.country }}</td>
+                            <td>{{ beer.type }}</td>
+                            <td>{{ beer.degree }}</td>
+                            <td>{{ beer.price }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
     {% else %}
         {{ 'app.no_data'|trans }}
     {% endif %}

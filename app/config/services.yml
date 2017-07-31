@@ -4,17 +4,6 @@ parameters:
     #parameter_name: value
 
 services:
-    app.form.registration:
-        class: AppBundle\Form\Type\RegistrationType
-        tags:
-            - { name: form.type, alias: app_user_registration }
     _defaults:
         autowire: true
         public: false
-    app.session_helper:
-        class: AppBundle\Helper\SessionHelper
-        arguments: ['%max_user_by_session%']
-        public: true
-    app.user_helper:
-        class: AppBundle\Helper\UserHelper
-        public: true

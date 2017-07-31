@@ -1,68 +1,18 @@
-layout:
-    logged_in_as: Bienvenue %username%, il vous reste %hour%h cette semaine
 app:
-    create_account: Créer un compte
-    session:
-        form:
-            day: Jour
-            start_time: Heure de début
-            end_time: Heure de fin
-            save: Sauvegarder
-        no_user: Pas d'inscrit pour cette session.
-        subscription_in: Inscrit à cette session
-        already_start: Cette session à déjà commencée ou est terminée !
-        not_exist: Cette session n'existe pas !
-        removed: Session supprimée.
-        max_user: Cette session n'a plus de place ! Choisissez en une autre.
-        login: Vous devez être connecté !
-        not_access: Vous ne pouvez pas faire ceci !
-        add: Inscription validé.
-        max_session: Vous ne pouvez plus vous inscrire pour cette semaine !
-        already_session: Vous êtes déjà inscrit à cette session !
-        subscription_here: Vous êtes inscrit
-        max_user: Plus de place pour cette session.
-        subscription_removed: Votre désinscription a bien été prise en compte.
-        exist: Il existe déjà un session pour cette période !
-        start_up_end: L'heure de début ne peut pas être suppérieur à l'heure de fin !
-        session_add: Session ajoutée.
-    subscription: %nbuser%/%maxuser% inscrit
-    monday: Lundi
-    tuesday: Mardi
-    wednesday: Mercredi
-    thursday: Jeudi
-    friday: Vendredi
-    saturday: Samedi
-    sunday: Dimanche
-    no_data: Pas de donnée
-    user:
-        list: Liste utilisateur
-        title: Utilisateurs
-        user_create: Utilisateur crée/modifié !
-        user_not_exist: L'utilisateur n'existe pas !
-        admin_user: Impossible de modifier le statut d'un Admin !
-        state_update: Statut modifié.
-        user_create_front: Inscription validée. Vous allez reçevoir un mail quand votre compte sera activé.
-        meta_title:
-            list: Liste utilisateur
-        form:
-            hour: Heure par semaine
-            firstname: Prénom
-            lastname: Nom
-            phone: Téléphone
-            username: Nom d'utilisateur
-            email: Email
-            enabled: Activé
-            disabled: Désactivé
-            htag: '#'
     global:
-        title: Crossfit Planner
-        home: Accueil
-        dashboard: Backoffice
-        profile: Profil
-        add_session: Ajouter une session
-    btn:
-        subscription: S'inscrire
-        unsubscription: Se désinscrire
-        delete: Supprimer
-        open: Ouvrir
-
+        title: Beer district
+        disconnect: Se déconnecter
+    homepage: Page d'accueil
+    beer:
+        edit: Edition
+        list: Listes des bières
+        number: Numéro
+        name: Nom
+        brewery: Brasserie
+        country: Pays
+        type: Type
+        degree: Degré d'alcool
+        price: Prix
+        actions: Actions
+        beer_edit: Bière éditée
+        not_exist: Cette bière avec cet id n'existe pas

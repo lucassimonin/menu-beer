@@ -38,10 +38,6 @@ framework:
 twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
-    globals:
-        max_user: '%max_user_by_session%'
-        twig_session_helper: '@app.session_helper'
-        twig_user_helper: '@app.user_helper'
     form_themes:
         - 'bootstrap_3_layout.html.twig'
 
@@ -82,7 +78,4 @@ fos_user:
     from_email:
         address: "%mailer_user%"
         sender_name: "%mailer_user%"
-    registration:
-        form:
-            type: AppBundle\Form\Type\RegistrationType
 

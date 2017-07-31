@@ -1,4 +1,4 @@
-Crossfit planning
+Menu beer district
 =========
 
 To launch the application :
@@ -13,9 +13,3 @@ $ php bin/console serv:star (or php bin/console server:start)
 ```
 
 go to : http://127.0.0.1:8000 (admin credentials : admin/admin)
-
-TODO
-=========
- - Refactoring Model create service => DONE
- - Show list of subscriber for an session => Add tooltip on badge DONE
- - Add test PHPUnit

@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+{% block meta_title %}{{ ('app.beer.list')|trans }} - {{ ('app.beer.edit')|trans }}{% endblock %}
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
+{% block content %}
+    <div class="container" id="main">
+        {{ form_start(form, {'attr': {'id': 'edit_beer'}}) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
