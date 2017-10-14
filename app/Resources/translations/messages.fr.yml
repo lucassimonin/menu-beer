@@ -2,6 +2,38 @@ app:
     global:
         title: Beer district
         disconnect: Se déconnecter
+        save: Savegarder
+        france: France
+        allemagne: Allemagne
+        angleterre: Angleterre
+        argentine: Argentine
+        australie: Australie
+        autriche: Autriche
+        belgique: Belgique
+        canada: Canada
+        chine: Chine
+        cuba: Cuba
+        danemark: Danemark
+        ecosse: Ecosse
+        espagne: Espagne
+        hollande: Hollande
+        inde: Inde
+        irelande: Irelande
+        italie: Italie
+        jamaique: Jamaïque
+        japon: Japon
+        maroc: Maroc
+        mexique: Mexique
+        norvege: Norvège
+        nouvelle_zelande: Nouvelle zélande
+        pays_de_galles: Pays de galles
+        pologne: Pologne
+        portugal: Portugal
+        republique_tcheque: République tchèque
+        sri_lanka: Sri lanka
+        suede: Suède
+        usa: USA
+        vietnam: Vietnam
     homepage: Page d'accueil
     beer:
         edit: Edition
@@ -11,8 +43,8 @@ app:
         brewery: Brasserie
         country: Pays
         type: Type
-        degree: Degré d'alcool
-        price: Prix
+        price: Prix 25cl
+        price2: Prix 50cl
         actions: Actions
         beer_edit: Bière éditée
         not_exist: Cette bière avec cet id n'existe pas

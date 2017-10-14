@@ -56,17 +56,18 @@ class Beer
      */
     private $type;
     /**
-     * @var float $degree
-     *
-     * @ORM\Column(name="degree", type="float")
-     */
-    private $degree;
-    /**
      * @var float $price
      *
      * @ORM\Column(name="price", type="float")
      */
     private $price;
+
+    /**
+     * @var float $price
+     *
+     * @ORM\Column(name="price2", type="float")
+     */
+    private $price2;
 
     /**
      * @return int
@@ -161,21 +162,6 @@ class Beer
     /**
      * @return float
      */
-    public function getDegree(): float
-    {
-        return $this->degree;
-    }
-    /**
-     * @param float $degree
-     */
-    public function setDegree(float $degree)
-    {
-        $this->degree = $degree;
-    }
-
-    /**
-     * @return float
-     */
     public function getPrice(): float
     {
         return $this->price;
@@ -187,4 +173,22 @@ class Beer
     {
         $this->price = $price;
     }
+
+    /**
+     * @return float
+     */
+    public function getPrice2()
+    {
+        return $this->price2;
+    }
+
+    /**
+     * @param float $price2
+     */
+    public function setPrice2($price2)
+    {
+        $this->price2 = $price2;
+    }
+
+
 }

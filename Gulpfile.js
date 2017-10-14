@@ -25,13 +25,18 @@ var paths = {
         ],
         css: [
             'web/assets/vendor/bootstrap/dist/css/bootstrap.css',
+            'web/assets/vendor/flag-icon-css/css/flag-icon.min.css',
             'web/assets/public/css/main.css',
         ],
         css_print: [
             'web/assets/vendor/bootstrap/dist/css/bootstrap.css',
         ],
         fonts: [
-            'web/assets/vendor/bootstrap/fonts/**'
+            'web/assets/vendor/bootstrap/fonts/**',
+            'web/assets/public/fonts/**'
+        ],
+        flags: [
+            'web/assets/vendor/flag-icon-css/flags/**'
         ]
     }
 };
@@ -79,6 +84,13 @@ gulp.task('app-fonts', function() {
         ;
 });
 
+gulp.task('shop-flags', function() {
+    return gulp.src(paths.app.flags)
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest(appRootPath + 'flags/'))
+        ;
+});
+
 gulp.task('app-watch', function() {
     livereload.listen();
 
@@ -89,5 +101,5 @@ gulp.task('app-watch', function() {
     gulp.watch(paths.app.fonts, ['app-fonts']);
 });
 
-gulp.task('default', ['app-js', 'app-js-head', 'app-js-ie', 'app-css', 'app-fonts']);
+gulp.task('default', ['app-js', 'app-js-head', 'app-js-ie', 'app-css', 'app-fonts', 'shop-flags']);
 gulp.task('watch', ['default', 'app-watch']);

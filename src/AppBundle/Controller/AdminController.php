@@ -12,14 +12,14 @@ use Symfony\Component\HttpFoundation\Response;
 class AdminController extends Controller
 {
     /**
-     * @Route("/admin/dashboard", name="adminpage")
+     * @Route("/admin", name="adminpage")
      * Dashboard index
      */
     public function indexAction(): Response
     {
         $beers = $this->getDoctrine()->getRepository('AppBundle:Beer')->findAllOrderBy(['number' => 'ASC']);
 
-        return $this->render('admin/index.html.twig', ['beers' => $beers]);
+        return $this->render('admin/index.html.twig', ['beers' => $beers, 'classBody' => '']);
     }
 
     /**
@@ -48,6 +48,6 @@ class AdminController extends Controller
             return $this->redirectToRoute('adminpage');
         }
 
-        return $this->render('admin/form/edit_beer.html.twig', ['form' => $form->createView()]);
+        return $this->render('admin/form/edit_beer.html.twig', ['form' => $form->createView(), 'classBody' => '']);
     }
 }

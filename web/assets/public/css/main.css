@@ -1,9 +1,79 @@
+@font-face {
+    font-family: 'Neutra Display';
+    src: url('../fonts/NeutraDisp-Bold.eot');
+    src: url('../fonts/NeutraDisp-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/NeutraDisp-Bold.woff2') format('woff2'),
+    url('../fonts/NeutraDisp-Bold.woff') format('woff'),
+    url('../fonts/NeutraDisp-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 #main {
-    margin-top: 20px;
+    height: 100vh;
+}
+
+#top {
+    height: 15%;
+}
+
+#beer-table {
+    height: 85%;
 }
 
 #login {
     margin-top:100px;
+}
+
+body.front {
+    background: url("../../public/img/bg.png") #333 no-repeat;
+    background-size: cover;
+    font-family: 'Neutra Display';
+    color: #fff;
+}
+
+h2 {
+    font-size: 5vh;
+    margin: 1vh 0;
+}
+
+h3 {
+    font-size: 5vh;
+}
+
+.subtitle {
+    font-size: 2vh;
+}
+
+.title-beer {
+    margin-left: 7vh;
+}
+
+.price {
+    font-size: 3vh;
+}
+
+.circle {
+    border: 1px solid #fff;
+    width: 5vw;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 3vw;
+}
+
+.item.dark {
+    background-color: #211d1a;
+    opacity: 0.8;
+}
+
+.item.light-dark {
+    background-color: #2a2623;
+    opacity: 0.8;
 }
 
 
@@ -42,10 +112,7 @@
     border-radius: 0;
 }
 
-h1, .h1, h2, .h2, h3, .h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-}
+
 
 .clear {
     clear:both;
@@ -74,6 +141,24 @@ h1, .h1, h2, .h2, h3, .h3 {
 
 .input-planner.password {
     background: url("../../public/img/IconLock.svg") no-repeat 26px center;
+}
+
+p {
+    margin:0;
+}
+
+.item {
+    padding: 1.3vh;
+    height: 12.5%;
+}
+
+.country-brewery {
+    margin-left: 4vw;
+    font-size: 3vh;
+}
+
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+    vertical-align: middle;
 }
 
 /* Small devices (tablets, 768px and up) */

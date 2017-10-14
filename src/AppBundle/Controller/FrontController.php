@@ -17,6 +17,6 @@ class FrontController extends Controller
         $beers = $this->getDoctrine()->getRepository('AppBundle:Beer')->findAllOrderBy(['number' => 'ASC']);
 
 
-        return $this->render('front/index.html.twig', ['beers' => $beers]);
+        return $this->render('front/index.html.twig', ['beers' => $beers, 'classBody' => 'front']);
     }
 }

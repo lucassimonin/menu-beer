@@ -8,7 +8,7 @@
         {% include 'pagelayout/page_head_for_ie.html.twig' %}
         {% include 'pagelayout/page_head_script.html.twig' %}
     </head>
-    <body>
+    <body {% if classBody is defined %}class="{{ classBody }}"{% endif %}>
         {% include 'pagelayout/flashmessage.html.twig' %}
         {% block content %}{% endblock %}
         {% include 'pagelayout/page_footer_script.html.twig' %}

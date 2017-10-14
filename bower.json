@@ -1,12 +1,13 @@
 {
-  "name": "cvwebsite",
+  "name": "menubeer",
   "private": true,
   "dependencies": {
     "bootstrap": "3.*",
     "modernizr": "~2.8.1",
     "html5shiv": "latest",
     "respond": "latest",
-    "classie": "^1.0.1"
+    "classie": "^1.0.1",
+    "flag-icon-css": "^2.8.0"
   },
   "overrides": {
     "bootstrap": {

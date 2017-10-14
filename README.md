@@ -1,5 +1,6 @@
-Menu beer district
+Menu beer district http://www.beerdistrict.fr/
 =========
+(Website for big screen like TV)
 
 To launch the application :
 ```bash

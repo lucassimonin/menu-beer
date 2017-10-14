@@ -1,38 +1,47 @@
 {% extends 'base.html.twig' %}
 {% block meta_title %}{{ ('app.homepage')|trans }}{% endblock %}
 {% block content %}
-<div class="container" id="main">
-    {% if beers|length > 0 %}
-        <div class="table-responsive">
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>{{ ('app.beer.number')|trans }}</th>
-                    <th>{{ ('app.beer.name')|trans }}</th>
-                    <th>{{ ('app.beer.brewery')|trans }}</th>
-                    <th>{{ ('app.beer.country')|trans }}</th>
-                    <th>{{ ('app.beer.type')|trans }}</th>
-                    <th>{{ ('app.beer.degree')|trans }}</th>
-                    <th>{{ ('app.beer.price')|trans }}</th>
-                </tr>
-                </thead>
-                <tbody>
-                    {% for beer in beers %}
-                        <tr>
-                            <td>{{ beer.number }}</td>
-                            <td>{{ beer.name }}</td>
-                            <td>{{ beer.brewery }}</td>
-                            <td>{{ beer.country }}</td>
-                            <td>{{ beer.type }}</td>
-                            <td>{{ beer.degree }}</td>
-                            <td>{{ beer.price }}</td>
-                        </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+    <div class="container-full" id="main">
+        <div class="col-lg-12 text-center" id="top">
+            <img src={{ asset('/assets/public/img/logo.png') }} />
+            <h2>ON TAP TO NIGHT</h2>
         </div>
-    {% else %}
-        {{ 'app.no_data'|trans }}
-    {% endif %}
-</div>
+        {% set color = 'dark' %}
+        {% set i = 0 %}
+        <div id="beer-table">
+            {% if beers|length > 0 %}
+                {% for beer in beers %}
+                    <div class="col-lg-6 item {{ color }}">
+                        <div class="circle pull-left">{{ beer.number }}</div>
+                        <div class="country-brewery pull-left text-center">
+                            {% set countryid = 'code_iso.' ~ beer.country|lower|replace({'é': 'e', 'è': 'e', 'ï': 'i', 'î': 'i', ' ':'_'}) %}
+                            <span class="flag-icon flag-icon-{{ countryid|getparameter }}"></span>
+                            <p class="brewery">{{ beer.brewery }}</p>
+                        </div>
+                        <div class="pull-left text-center title-beer">
+                            <h3>{{ beer.name }}</h3>
+                            <p class="subtitle">{{ beer.type }}   </p>
+                        </div>
+                        <div class="price pull-right">
+                            <p>25cl: {{ beer.price }}€</p>
+                            <p>50cl: {{ beer.price2 }}€</p>
+                        </div>
+                    </div>
+                    {% if i == 2 %}
+                        {% if color == 'dark' %}
+                            {% set color = 'light-dark' %}
+                        {% else %}
+                            {% set color = 'dark' %}
+                        {% endif %}
+                        {% set i = 0 %}
+                    {% elseif loop.first %}
+                        {% set color = 'light-dark' %}
+                    {% endif %}
+                    {% set i = i + 1 %}
+                {% endfor %}
+            {% else %}
+                {{ 'app.no_data'|trans }}
+            {% endif %}
+        </div>
+    </div>
 {% endblock %}
