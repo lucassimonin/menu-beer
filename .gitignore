@@ -34,3 +34,5 @@ src/.DS_Store
 web/.DS_Store
 .DS_Store
 node_modules/
+var/cache/
+var/logs/
