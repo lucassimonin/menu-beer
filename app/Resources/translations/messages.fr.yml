@@ -43,6 +43,7 @@ app:
         brewery: Brasserie
         country: Pays
         type: Type
+        degree: Degré d'alcool
         price: Prix 25cl
         price2: Prix 50cl
         actions: Actions

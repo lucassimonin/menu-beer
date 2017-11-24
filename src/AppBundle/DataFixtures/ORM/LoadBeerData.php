@@ -18,6 +18,7 @@ class LoadBeerData implements FixtureInterface
         $beer->setCountry('france');
         $beer->setPrice(4.5);
         $beer->setPrice2(9);
+        $beer->setDegree(2);
 
         $manager->persist($beer);
         $manager->flush();
@@ -30,6 +31,7 @@ class LoadBeerData implements FixtureInterface
         $beer->setCountry('france');
         $beer->setPrice(4.5);
         $beer->setPrice2(9);
+        $beer->setDegree(2);
 
         $manager->persist($beer);
         $manager->flush();
@@ -42,6 +44,7 @@ class LoadBeerData implements FixtureInterface
         $beer->setCountry('france');
         $beer->setPrice(3);
         $beer->setPrice2(9);
+        $beer->setDegree(2);
 
 
         $manager->persist($beer);
@@ -55,6 +58,7 @@ class LoadBeerData implements FixtureInterface
         $beer->setCountry('france');
         $beer->setPrice(3);
         $beer->setPrice2(9);
+        $beer->setDegree(2);
 
 
         $manager->persist($beer);
@@ -68,6 +72,7 @@ class LoadBeerData implements FixtureInterface
         $beer->setCountry('france');
         $beer->setPrice(3);
         $beer->setPrice2(9);
+        $beer->setDegree(2);
 
 
         $manager->persist($beer);
@@ -81,6 +86,7 @@ class LoadBeerData implements FixtureInterface
         $beer->setCountry('france');
         $beer->setPrice(3);
         $beer->setPrice2(9);
+        $beer->setDegree(2);
 
 
         $manager->persist($beer);
@@ -94,6 +100,7 @@ class LoadBeerData implements FixtureInterface
         $beer->setCountry('france');
         $beer->setPrice(3);
         $beer->setPrice2(9);
+        $beer->setDegree(2);
 
 
         $manager->persist($beer);
@@ -107,6 +114,7 @@ class LoadBeerData implements FixtureInterface
         $beer->setCountry('france');
         $beer->setPrice(3);
         $beer->setPrice2(9);
+        $beer->setDegree(2);
 
 
         $manager->persist($beer);
@@ -120,6 +128,7 @@ class LoadBeerData implements FixtureInterface
         $beer->setCountry('france');
         $beer->setPrice(3);
         $beer->setPrice2(9);
+        $beer->setDegree(2);
 
 
         $manager->persist($beer);
@@ -133,6 +142,7 @@ class LoadBeerData implements FixtureInterface
         $beer->setCountry('france');
         $beer->setPrice(3);
         $beer->setPrice2(9);
+        $beer->setDegree(2);
 
 
         $manager->persist($beer);
@@ -146,6 +156,7 @@ class LoadBeerData implements FixtureInterface
         $beer->setCountry('france');
         $beer->setPrice(3);
         $beer->setPrice2(9);
+        $beer->setDegree(2);
 
 
         $manager->persist($beer);
@@ -159,6 +170,7 @@ class LoadBeerData implements FixtureInterface
         $beer->setCountry('france');
         $beer->setPrice(3);
         $beer->setPrice2(9);
+        $beer->setDegree(2);
 
 
         $manager->persist($beer);
@@ -172,6 +184,7 @@ class LoadBeerData implements FixtureInterface
         $beer->setCountry('france');
         $beer->setPrice(3);
         $beer->setPrice2(9);
+        $beer->setDegree(2);
 
 
         $manager->persist($beer);
@@ -185,6 +198,7 @@ class LoadBeerData implements FixtureInterface
         $beer->setCountry('france');
         $beer->setPrice(3);
         $beer->setPrice2(9);
+        $beer->setDegree(2);
 
 
         $manager->persist($beer);
@@ -198,6 +212,7 @@ class LoadBeerData implements FixtureInterface
         $beer->setCountry('france');
         $beer->setPrice(3);
         $beer->setPrice2(9);
+        $beer->setDegree(2);
 
 
         $manager->persist($beer);
@@ -211,6 +226,7 @@ class LoadBeerData implements FixtureInterface
         $beer->setCountry('france');
         $beer->setPrice(3);
         $beer->setPrice2(9);
+        $beer->setDegree(2);
 
 
         $manager->persist($beer);

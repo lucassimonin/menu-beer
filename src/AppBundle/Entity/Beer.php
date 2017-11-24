@@ -56,6 +56,12 @@ class Beer
      */
     private $type;
     /**
+     * @var string $degree
+     *
+     * @ORM\Column(name="degree", type="string", length=255)
+     */
+    private $degree;
+    /**
      * @var float $price
      *
      * @ORM\Column(name="price", type="float")
@@ -157,6 +163,21 @@ class Beer
     public function setType(string $type)
     {
         $this->type = $type;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDegree(): string
+    {
+        return $this->degree;
+    }
+    /**
+     * @param string $degree
+     */
+    public function setDegree(string $degree)
+    {
+        $this->degree = $degree;
     }
 
     /**
