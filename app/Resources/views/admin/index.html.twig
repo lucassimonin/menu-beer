@@ -16,6 +16,7 @@
                         <th>{{ ('app.beer.brewery')|trans }}</th>
                         <th>{{ ('app.beer.country')|trans }}</th>
                         <th>{{ ('app.beer.type')|trans }}</th>
+                        <th>{{ ('app.beer.degree')|trans }}</th>
                         <th>{{ ('app.beer.price')|trans }}</th>
                         <th>{{ ('app.beer.price2')|trans }}</th>
                         <th>{{ ('app.beer.actions')|trans }}</th>
@@ -29,6 +30,7 @@
                                 <td>{{ beer.brewery }}</td>
                                 <td>{{ beer.country }}</td>
                                 <td>{{ beer.type }}</td>
+                                <td>{{ beer.degree }}</td>
                                 <td>{{ beer.price }}</td>
                                 <td>{{ beer.price2 }}</td>
                                 {% include ':parts:actions.html.twig'  with {'id': beer.id } %}

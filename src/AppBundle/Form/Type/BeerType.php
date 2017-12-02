@@ -62,6 +62,10 @@ class BeerType extends AbstractType
             'label' => 'app.beer.type',
             'required' => true
         ])
+        ->add('degree', TextType::class, [
+            'label' => 'app.beer.degree',
+            'required' => true
+        ])
         ->add('price', MoneyType::class, [
             'required' => true,
             'label' => 'app.beer.price'
