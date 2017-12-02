@@ -14,6 +14,11 @@ h1, .h1, h2, .h2, h3, .h3 {
     margin-bottom: 0;
 }
 
+.col-lg-6.item {
+    width: 50%;
+    float: left;
+}
+
 #main {
     height: 100vh;
 }
