@@ -14,21 +14,16 @@ h1, .h1, h2, .h2, h3, .h3 {
     margin-bottom: 0;
 }
 
-.col-lg-6.item {
-    width: 50%;
-    float: left;
-}
-
 #main {
     height: 100vh;
 }
 
 #top {
-    height: 15%;
+    height: 30%;
 }
 
 #beer-table {
-    height: 85%;
+    height: 70%;
 }
 
 #login {
@@ -48,7 +43,8 @@ h2 {
 }
 
 h3 {
-    font-size: 5vh;
+    font-size: 4vh;
+    word-wrap: break-word;
 }
 
 .subtitle {
@@ -56,11 +52,13 @@ h3 {
 }
 
 .title-beer {
-    margin-left: 7vh;
+    word-wrap: break-word;
+    width: 28vw;
 }
 
 .price {
     font-size: 3vh;
+    width: 8vw;
 }
 
 .circle {
@@ -153,12 +151,12 @@ p {
 }
 
 .item {
-    padding: 1.3vh;
+    padding: 0.2vh 1vh;
     height: 12.5%;
 }
 
 .country-brewery {
-    margin-left: 4vw;
+    width: 7vw;
     font-size: 3vh;
 }
 
@@ -168,10 +166,15 @@ p {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+    .col-lg-6.item {
+        float: left;
+        width: 50%;
+    }
 }
 
 /* Large devices (large desktops, 1200px and up) */
@@ -182,9 +185,47 @@ p {
 }
 
 @media (max-width: 992px) {
+    .circle {
+        width: 7vw;
+        font-size: 5vw;
+    }
+    .country-brewery {
+        width: 10vw;
+    }
+    .title-beer {
+        width: 70vw;
+    }
+    .price {
+        width: 11vw;
+    }
 }
 
 @media (max-width: 767px) {
+    .circle {
+        width: 12vw;
+        font-size: 9vw;
+    }
+    .country-brewery {
+        width: 20vw;
+    }
+    .title-beer {
+        width: 40vw;
+    }
+    h3 {
+        font-size: 3vh;
+    }
+    .price {
+        width: 21vw;
+    }
+}
+
+@media (max-width: 375px) {
+    h3 {
+        font-size: 2vh;
+    }
+    .price {
+        width: 24vw;
+    }
 }
 
 
